@@ -30,6 +30,7 @@ vars:
     time_zone: "{{ source('zendesk', 'time_zone') }}"
     daylight_time: "{{ source('zendesk', 'daylight_time') }}"
     audit_log: "{{ source('zendesk', 'audit_log') }}"
+    internal_user_criteria: "lower(email) like '%@pliancy.com'" # can reference any non-custom field in USER
 
   zendesk__ticket_passthrough_columns: []
   zendesk__user_passthrough_columns: []
